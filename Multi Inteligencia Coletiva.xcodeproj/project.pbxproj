@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1658BFC01F6F5639009B73C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1658BFBF1F6F5639009B73C0 /* AppDelegate.swift */; };
-		1658BFC21F6F5639009B73C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1658BFC11F6F5639009B73C0 /* ViewController.swift */; };
 		1658BFC51F6F5639009B73C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1658BFC31F6F5639009B73C0 /* Main.storyboard */; };
 		1658BFC71F6F5639009B73C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1658BFC61F6F5639009B73C0 /* Assets.xcassets */; };
 		1658BFCA1F6F563A009B73C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1658BFC81F6F563A009B73C0 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		1658BFBC1F6F5639009B73C0 /* Multi Inteligencia Coletiva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multi Inteligencia Coletiva.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1658BFBF1F6F5639009B73C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1658BFC11F6F5639009B73C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1658BFC41F6F5639009B73C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1658BFC61F6F5639009B73C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1658BFC91F6F563A009B73C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +52,29 @@
 		1658BFBE1F6F5639009B73C0 /* Multi Inteligencia Coletiva */ = {
 			isa = PBXGroup;
 			children = (
+				1658BFD41F6F57BF009B73C0 /* models */,
+				1658BFD31F6F57AC009B73C0 /* controllers */,
 				1658BFBF1F6F5639009B73C0 /* AppDelegate.swift */,
-				1658BFC11F6F5639009B73C0 /* ViewController.swift */,
 				1658BFC31F6F5639009B73C0 /* Main.storyboard */,
 				1658BFC61F6F5639009B73C0 /* Assets.xcassets */,
 				1658BFC81F6F563A009B73C0 /* LaunchScreen.storyboard */,
 				1658BFCB1F6F563A009B73C0 /* Info.plist */,
 			);
 			path = "Multi Inteligencia Coletiva";
+			sourceTree = "<group>";
+		};
+		1658BFD31F6F57AC009B73C0 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		1658BFD41F6F57BF009B73C0 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +150,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1658BFC21F6F5639009B73C0 /* ViewController.swift in Sources */,
 				1658BFC01F6F5639009B73C0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +275,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AUFR4M6NN8;
 				INFOPLIST_FILE = "Multi Inteligencia Coletiva/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.tavares.Multi-Inteligencia-Coletiva";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,6 +289,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AUFR4M6NN8;
 				INFOPLIST_FILE = "Multi Inteligencia Coletiva/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.tavares.Multi-Inteligencia-Coletiva";
 				PRODUCT_NAME = "$(TARGET_NAME)";
