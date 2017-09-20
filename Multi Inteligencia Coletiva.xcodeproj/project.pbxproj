@@ -11,6 +11,10 @@
 		1658BFC51F6F5639009B73C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1658BFC31F6F5639009B73C0 /* Main.storyboard */; };
 		1658BFC71F6F5639009B73C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1658BFC61F6F5639009B73C0 /* Assets.xcassets */; };
 		1658BFCA1F6F563A009B73C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1658BFC81F6F563A009B73C0 /* LaunchScreen.storyboard */; };
+		167623D41F712B1000A4E30C /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167623D31F712B1000A4E30C /* CardTableViewCell.swift */; };
+		167623D81F713C8700A4E30C /* CursosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167623D71F713C8700A4E30C /* CursosTableViewController.swift */; };
+		16C87F041F71F15500D40621 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C87F031F71F15500D40621 /* HeaderTableViewCell.swift */; };
+		9EC564B24DD93CA3B05AE3D2 /* Pods_Multi_Inteligencia_Coletiva.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63730C0376272CB413BC257C /* Pods_Multi_Inteligencia_Coletiva.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,12 @@
 		1658BFC61F6F5639009B73C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1658BFC91F6F563A009B73C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1658BFCB1F6F563A009B73C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		167623D31F712B1000A4E30C /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTableViewCell.swift; path = app/components/CardTableViewCell.swift; sourceTree = "<group>"; };
+		167623D71F713C8700A4E30C /* CursosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CursosTableViewController.swift; path = app/controllers/CursosTableViewController.swift; sourceTree = "<group>"; };
+		16C87F031F71F15500D40621 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderTableViewCell.swift; path = app/components/HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		2F2FC5CCB386B86395BD15CD /* Pods-Multi Inteligencia Coletiva.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Multi Inteligencia Coletiva.release.xcconfig"; path = "Pods/Target Support Files/Pods-Multi Inteligencia Coletiva/Pods-Multi Inteligencia Coletiva.release.xcconfig"; sourceTree = "<group>"; };
+		63730C0376272CB413BC257C /* Pods_Multi_Inteligencia_Coletiva.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Multi_Inteligencia_Coletiva.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D057E03838A2DE195E9E28D8 /* Pods-Multi Inteligencia Coletiva.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Multi Inteligencia Coletiva.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Multi Inteligencia Coletiva/Pods-Multi Inteligencia Coletiva.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EC564B24DD93CA3B05AE3D2 /* Pods_Multi_Inteligencia_Coletiva.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +49,8 @@
 			children = (
 				1658BFBE1F6F5639009B73C0 /* Multi Inteligencia Coletiva */,
 				1658BFBD1F6F5639009B73C0 /* Products */,
+				79F04779472AB1E36EE03C17 /* Pods */,
+				B63ACBBBF2ED7AA335FCBF58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +65,7 @@
 		1658BFBE1F6F5639009B73C0 /* Multi Inteligencia Coletiva */ = {
 			isa = PBXGroup;
 			children = (
+				167623D21F712AE000A4E30C /* components */,
 				1658BFD41F6F57BF009B73C0 /* models */,
 				1658BFD31F6F57AC009B73C0 /* controllers */,
 				1658BFBF1F6F5639009B73C0 /* AppDelegate.swift */,
@@ -66,6 +80,7 @@
 		1658BFD31F6F57AC009B73C0 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				167623D71F713C8700A4E30C /* CursosTableViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -77,6 +92,32 @@
 			name = models;
 			sourceTree = "<group>";
 		};
+		167623D21F712AE000A4E30C /* components */ = {
+			isa = PBXGroup;
+			children = (
+				167623D31F712B1000A4E30C /* CardTableViewCell.swift */,
+				16C87F031F71F15500D40621 /* HeaderTableViewCell.swift */,
+			);
+			name = components;
+			sourceTree = "<group>";
+		};
+		79F04779472AB1E36EE03C17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D057E03838A2DE195E9E28D8 /* Pods-Multi Inteligencia Coletiva.debug.xcconfig */,
+				2F2FC5CCB386B86395BD15CD /* Pods-Multi Inteligencia Coletiva.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B63ACBBBF2ED7AA335FCBF58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63730C0376272CB413BC257C /* Pods_Multi_Inteligencia_Coletiva.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -84,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1658BFCE1F6F563A009B73C0 /* Build configuration list for PBXNativeTarget "Multi Inteligencia Coletiva" */;
 			buildPhases = (
+				6DF7FC3CC102158754B18269 /* [CP] Check Pods Manifest.lock */,
 				1658BFB81F6F5639009B73C0 /* Sources */,
 				1658BFB91F6F5639009B73C0 /* Frameworks */,
 				1658BFBA1F6F5639009B73C0 /* Resources */,
+				21609EA57888C8700BC7C2CC /* [CP] Embed Pods Frameworks */,
+				2AADB13E8DB37012734EF51E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,12 +189,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21609EA57888C8700BC7C2CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Multi Inteligencia Coletiva/Pods-Multi Inteligencia Coletiva-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Multi Inteligencia Coletiva/Pods-Multi Inteligencia Coletiva-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AADB13E8DB37012734EF51E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Multi Inteligencia Coletiva/Pods-Multi Inteligencia Coletiva-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DF7FC3CC102158754B18269 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Multi Inteligencia Coletiva-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1658BFB81F6F5639009B73C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16C87F041F71F15500D40621 /* HeaderTableViewCell.swift in Sources */,
 				1658BFC01F6F5639009B73C0 /* AppDelegate.swift in Sources */,
+				167623D41F712B1000A4E30C /* CardTableViewCell.swift in Sources */,
+				167623D81F713C8700A4E30C /* CursosTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +372,7 @@
 		};
 		1658BFCF1F6F563A009B73C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D057E03838A2DE195E9E28D8 /* Pods-Multi Inteligencia Coletiva.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AUFR4M6NN8;
@@ -285,6 +387,7 @@
 		};
 		1658BFD01F6F563A009B73C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F2FC5CCB386B86395BD15CD /* Pods-Multi Inteligencia Coletiva.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AUFR4M6NN8;
@@ -316,6 +419,7 @@
 				1658BFD01F6F563A009B73C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
