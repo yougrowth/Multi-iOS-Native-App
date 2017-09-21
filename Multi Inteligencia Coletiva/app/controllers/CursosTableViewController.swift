@@ -9,17 +9,40 @@
 import UIKit
 
 class CursosTableViewController: UITableViewController {
-    let courses = [ "1", "2", "3" ]
+    let cursos = [
+        Curso(
+            imagem: "",
+            titulo: "IOT no Atletismo",
+            descricao: "A tecnologia está mudando o mundo, e o esporte precisa acompanhar essa evolução. Nesse curso, aprenderemos como a tecnologia pode auxiliar na prática do atletismo.",
+            autor: Usuario(
+                nome: "Jessé Farias",
+                avatar: "jesse.jpg"
+            )
+        ),
+        Curso(
+            imagem: "",
+            titulo: "Comunidade de Inovação na Educação",
+            descricao: "As novas tecnologias nos trouxeram novas formas de interagir, e um inevitável processo de mudança...",
+            autor: Usuario(
+                nome: "Lucas Henrique",
+                avatar: "lucas.jpg"
+            )
+        ),
+        Curso(
+            imagem: "",
+            titulo: "Marketing com Enfoque em Mídias Sociais",
+            descricao: "As mídias sociais já fazem parte do cotidiano das pessoas, e saber se comunicar com elas a partir das redes há muito já deixou de ser um diferencial e se tornou obrigação.",
+            autor: Usuario(
+                nome: "Thayla Ferreira",
+                avatar: "thayla.jpg"
+            )
+        )
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "Cursos"
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -30,28 +53,32 @@ class CursosTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(section)
-        // #warning Incomplete implementation, return the number of rows
         if section == 0 {
             return 1
         }
         else {
-            return courses.count
+            return self.cursos.count
         }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell: UITableViewCell?
-        
         
         if indexPath.section == 0 {
-            cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as? HeaderTableViewCell
+            let header = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as? HeaderTableViewCell
+            
+            return header!
         }
         else {
-            cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath)
+            let card = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath) as? CardTableViewCell
+            
+            card?.cursoImage.image = UIImage(named: "baymax.jpg")
+            card?.cursoTituloLabel.text = self.cursos[indexPath.row].titulo
+            card?.cursoDescLabel.text = self.cursos[indexPath.row].descricao
+            card?.autorImage.image = UIImage(named: (self.cursos[indexPath.row].autor?.avatar)!)
+            card?.autorNome.text = self.cursos[indexPath.row].autor?.nome
+            
+            return card!
         }
-
-        return cell!
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -59,7 +86,7 @@ class CursosTableViewController: UITableViewController {
             return 100.0
         }
         else {
-            return 150.0
+            return 400.0
         }
     }
     
