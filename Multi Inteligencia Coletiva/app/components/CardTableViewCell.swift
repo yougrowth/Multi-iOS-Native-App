@@ -15,13 +15,13 @@ class CardTableViewCell: UITableViewCell {
     @IBOutlet weak var participarButton: UIButton!
     @IBOutlet weak var autorImage: UIImageView!
     @IBOutlet weak var autorNome: UILabel!
+    @IBOutlet weak var cardView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         
-        cursoImage.layer.borderWidth = 1
-        cursoImage.layer.borderColor = UIColor(red: 5/255, green: 66/255, blue: 62/255, alpha: 1/255).cgColor
+        cardView.layer.cornerRadius = 2
+        cardView.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,5 +29,4 @@ class CardTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

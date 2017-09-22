@@ -1,49 +1,19 @@
 //
-//  CursosTableViewController.swift
+//  SideMenuTableViewController.swift
 //  Multi Inteligencia Coletiva
 //
-//  Created by Lucas Rocha on 19/09/17.
+//  Created by Lucas Rocha on 21/09/17.
 //  Copyright © 2017 Lucas Tavares. All rights reserved.
 //
 
 import UIKit
 
-class CursosTableViewController: UITableViewController {
-    let cursos = [
-        Curso(
-            imagem: "",
-            titulo: "IOT no Atletismo",
-            descricao: "A tecnologia está mudando o mundo, e o esporte precisa acompanhar essa evolução. Nesse curso, aprenderemos como a tecnologia pode auxiliar na prática do atletismo.",
-            autor: Usuario(
-                nome: "Jessé Farias",
-                avatar: "jesse.jpg"
-            )
-        ),
-        Curso(
-            imagem: "",
-            titulo: "Comunidade de Inovação na Educação",
-            descricao: "As novas tecnologias nos trouxeram novas formas de interagir, e um inevitável processo de mudança...",
-            autor: Usuario(
-                nome: "Lucas Henrique",
-                avatar: "lucas.jpg"
-            )
-        ),
-        Curso(
-            imagem: "",
-            titulo: "Marketing com Enfoque em Mídias Sociais",
-            descricao: "As mídias sociais já fazem parte do cotidiano das pessoas, e saber se comunicar com elas a partir das redes há muito já deixou de ser um diferencial e se tornou obrigação.",
-            autor: Usuario(
-                nome: "Thayla Ferreira",
-                avatar: "thayla.jpg"
-            )
-        )
-    ]
+class SideMenuTableViewController: UITableViewController {
 
+    let items = ["Cursos", "Workshops", "Palestras", "Meetup", "Desafios"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.title = "Cursos"
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CursosTableViewController.dismissKeyboard)))
     }
 
     // MARK: - Table view data source
@@ -53,47 +23,40 @@ class CursosTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
         if section == 0 {
             return 1
         }
         else {
-            return self.cursos.count
+            return items.count
         }
     }
 
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
-            let header = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as? HeaderTableViewCell
-            
-            return header!
+            return tableView.dequeueReusableCell(withIdentifier: "MenuHeaderCell", for: indexPath)
         }
         else {
-            let card = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath) as? CardTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MenuItemCell", for: indexPath) as? MenuItemTableViewCell
             
-            card?.cursoImage.image = UIImage(named: "baymax.jpg")
-            card?.cursoTituloLabel.text = self.cursos[indexPath.row].titulo
-            card?.cursoDescLabel.text = self.cursos[indexPath.row].descricao
-            card?.autorImage.image = UIImage(named: (self.cursos[indexPath.row].autor?.avatar)!)
-            card?.autorNome.text = self.cursos[indexPath.row].autor?.nome
+            cell?.itemTitleLabel.text = items[indexPath.row]
             
-            return card!
+            return cell!
         }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 100.0
+            return 100
         }
         else {
-            return 410.0
+            return 44
         }
     }
     
-    func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

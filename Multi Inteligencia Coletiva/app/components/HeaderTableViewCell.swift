@@ -18,6 +18,7 @@ class HeaderTableViewCell: UITableViewCell {
         // Initialization code
         
         titleLabel.text = "Cursos"
+        searchTextField.layer.borderColor = UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1).cgColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

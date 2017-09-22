@@ -14,6 +14,8 @@
 		160163311F7336F800A3B403 /* thayla.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1601632E1F7336F800A3B403 /* thayla.jpg */; };
 		160163341F7349E000A3B403 /* baymax.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 160163331F7349E000A3B403 /* baymax.jpg */; };
 		1602C2161F736797005EE7A1 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1602C2151F736797005EE7A1 /* MainNavigationViewController.swift */; };
+		160E72121F748762006ACAEF /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160E72111F748762006ACAEF /* SideMenuTableViewController.swift */; };
+		160E72141F749323006ACAEF /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160E72131F749323006ACAEF /* MenuItemTableViewCell.swift */; };
 		1658BFC01F6F5639009B73C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1658BFBF1F6F5639009B73C0 /* AppDelegate.swift */; };
 		1658BFC51F6F5639009B73C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1658BFC31F6F5639009B73C0 /* Main.storyboard */; };
 		1658BFC71F6F5639009B73C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1658BFC61F6F5639009B73C0 /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 		1601632E1F7336F800A3B403 /* thayla.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = thayla.jpg; path = app/assets/avatars/thayla.jpg; sourceTree = "<group>"; };
 		160163331F7349E000A3B403 /* baymax.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = baymax.jpg; sourceTree = "<group>"; };
 		1602C2151F736797005EE7A1 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainNavigationViewController.swift; path = app/controllers/MainNavigationViewController.swift; sourceTree = "<group>"; };
+		160E72111F748762006ACAEF /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SideMenuTableViewController.swift; path = app/controllers/SideMenuTableViewController.swift; sourceTree = "<group>"; };
+		160E72131F749323006ACAEF /* MenuItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuItemTableViewCell.swift; path = app/components/MenuItemTableViewCell.swift; sourceTree = "<group>"; };
 		1658BFBC1F6F5639009B73C0 /* Multi Inteligencia Coletiva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multi Inteligencia Coletiva.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1658BFBF1F6F5639009B73C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1658BFC41F6F5639009B73C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 			children = (
 				167623D71F713C8700A4E30C /* CursosTableViewController.swift */,
 				1602C2151F736797005EE7A1 /* MainNavigationViewController.swift */,
+				160E72111F748762006ACAEF /* SideMenuTableViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 			children = (
 				167623D31F712B1000A4E30C /* CardTableViewCell.swift */,
 				16C87F031F71F15500D40621 /* HeaderTableViewCell.swift */,
+				160E72131F749323006ACAEF /* MenuItemTableViewCell.swift */,
 			);
 			name = components;
 			sourceTree = "<group>";
@@ -301,10 +307,12 @@
 				1602C2161F736797005EE7A1 /* MainNavigationViewController.swift in Sources */,
 				160163211F73323200A3B403 /* Curso.swift in Sources */,
 				16C87F041F71F15500D40621 /* HeaderTableViewCell.swift in Sources */,
+				160E72141F749323006ACAEF /* MenuItemTableViewCell.swift in Sources */,
 				160163231F7332B400A3B403 /* Usuario.swift in Sources */,
 				1658BFC01F6F5639009B73C0 /* AppDelegate.swift in Sources */,
 				167623D41F712B1000A4E30C /* CardTableViewCell.swift in Sources */,
 				167623D81F713C8700A4E30C /* CursosTableViewController.swift in Sources */,
+				160E72121F748762006ACAEF /* SideMenuTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
