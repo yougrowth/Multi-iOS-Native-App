@@ -7,43 +7,25 @@
 //
 
 import UIKit
+import Foundation
 
 class CursosTableViewController: UITableViewController {
-    let cursos = [
-        Curso(
-            imagem: "",
-            titulo: "IOT no Atletismo",
-            descricao: "A tecnologia está mudando o mundo, e o esporte precisa acompanhar essa evolução. Nesse curso, aprenderemos como a tecnologia pode auxiliar na prática do atletismo.",
-            autor: Usuario(
-                nome: "Jessé Farias",
-                avatar: "jesse.jpg"
-            )
-        ),
-        Curso(
-            imagem: "",
-            titulo: "Comunidade de Inovação na Educação",
-            descricao: "As novas tecnologias nos trouxeram novas formas de interagir, e um inevitável processo de mudança...",
-            autor: Usuario(
-                nome: "Lucas Henrique",
-                avatar: "lucas.jpg"
-            )
-        ),
-        Curso(
-            imagem: "",
-            titulo: "Marketing com Enfoque em Mídias Sociais",
-            descricao: "As mídias sociais já fazem parte do cotidiano das pessoas, e saber se comunicar com elas a partir das redes há muito já deixou de ser um diferencial e se tornou obrigação.",
-            autor: Usuario(
-                nome: "Thayla Ferreira",
-                avatar: "thayla.jpg"
-            )
-        )
-    ]
+    let cursos:[Curso] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = "Cursos"
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CursosTableViewController.dismissKeyboard)))
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let defaults = UserDefaults.standard
+        
+        if defaults.string(forKey: "session") == nil {
+            performSegue(withIdentifier: "toLoginView", sender: self)
+        }
+        
     }
 
     // MARK: - Table view data source
@@ -74,7 +56,7 @@ class CursosTableViewController: UITableViewController {
             card?.cursoImage.image = UIImage(named: "baymax.jpg")
             card?.cursoTituloLabel.text = self.cursos[indexPath.row].titulo
             card?.cursoDescLabel.text = self.cursos[indexPath.row].descricao
-            card?.autorImage.image = UIImage(named: (self.cursos[indexPath.row].autor?.avatar)!)
+            card?.autorImage.image = UIImage(named: (self.cursos[indexPath.row].autor?.foto)!)
             card?.autorNome.text = self.cursos[indexPath.row].autor?.nome
             
             return card!
@@ -94,41 +76,13 @@ class CursosTableViewController: UITableViewController {
         view.endEditing(true)
     }
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    @IBAction func deslogar(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        
+        defaults.removeObject(forKey: "session")
+        performSegue(withIdentifier: "toLoginView", sender: self)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
+    
     /*
     // MARK: - Navigation
 

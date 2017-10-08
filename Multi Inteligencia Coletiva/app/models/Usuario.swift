@@ -8,12 +8,26 @@
 
 import UIKit
 
-class Usuario: NSObject {
+struct Usuario {
+    var id: Int!
     var nome: String?
-    var avatar: String?
-    
-    init(nome: String, avatar: String) {
-        self.nome = nome
-        self.avatar = avatar
+    var foto: String!
+    var email: String?
+    var cidade: String?
+    var senha: String!
+ 
+    var description: [String: Any] {
+        get { return [ "id": id, "nome": nome!, "foto": foto, "email": email!, "cidade": cidade!, "senha": senha ]}
     }
 }
+
+/*
+ {
+     "id": 3,
+     "nome": "Ariovaldo da Silva",
+     "foto": null,
+     "email": "ariovaldo.silva@mail.com",
+     "cidade": "São José das Pedras",
+     "senha": "$2a$10$IoTvBmG.JtMsJqfUTqDS8OuKTfoqJQgiUfNuhjk5XVVKPB02qvELK"
+ }
+ */

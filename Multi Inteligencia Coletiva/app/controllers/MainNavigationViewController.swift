@@ -13,10 +13,10 @@ class MainNavigationViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationBar.isTranslucent = false
-        self.navigationBar.barTintColor = UIColor(red: 15/255, green: 170/255, blue: 163/255, alpha: 1)
-        self.navigationBar.tintColor = UIColor.white
-        self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        navigationBar.isTranslucent = false
+        navigationBar.barTintColor = Colors.MAIN
+        navigationBar.tintColor = Colors.HIGHLIGHT_TEXT
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: Colors.HIGHLIGHT_TEXT]
         
     }
 

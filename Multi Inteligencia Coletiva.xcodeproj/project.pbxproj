@@ -16,13 +16,22 @@
 		1602C2161F736797005EE7A1 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1602C2151F736797005EE7A1 /* MainNavigationViewController.swift */; };
 		160E72121F748762006ACAEF /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160E72111F748762006ACAEF /* SideMenuTableViewController.swift */; };
 		160E72141F749323006ACAEF /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160E72131F749323006ACAEF /* MenuItemTableViewCell.swift */; };
+		161C93BC1F87063100F19BD0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161C93BB1F87063100F19BD0 /* LoginViewController.swift */; };
 		1658BFC01F6F5639009B73C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1658BFBF1F6F5639009B73C0 /* AppDelegate.swift */; };
 		1658BFC51F6F5639009B73C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1658BFC31F6F5639009B73C0 /* Main.storyboard */; };
 		1658BFC71F6F5639009B73C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1658BFC61F6F5639009B73C0 /* Assets.xcassets */; };
 		1658BFCA1F6F563A009B73C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1658BFC81F6F563A009B73C0 /* LaunchScreen.storyboard */; };
 		167623D41F712B1000A4E30C /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167623D31F712B1000A4E30C /* CardTableViewCell.swift */; };
 		167623D81F713C8700A4E30C /* CursosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167623D71F713C8700A4E30C /* CursosTableViewController.swift */; };
+		16777C011F76E7ED0044D208 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16777C001F76E7ED0044D208 /* Colors.swift */; };
+		16C708B31F89B1E30019A645 /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C708B21F89B1E30019A645 /* CadastroController.swift */; };
+		16C708B61F89B2FF0019A645 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C708B51F89B2FF0019A645 /* AlertFactory.swift */; };
+		16C708BC1F89BD140019A645 /* MainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C708BB1F89BD140019A645 /* MainTextField.swift */; };
+		16C708BE1F89E1710019A645 /* UsuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C708BD1F89E1710019A645 /* UsuarioService.swift */; };
 		16C87F041F71F15500D40621 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C87F031F71F15500D40621 /* HeaderTableViewCell.swift */; };
+		16E456461F896E5100580165 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E456451F896E5100580165 /* HttpService.swift */; };
+		16E456541F89A87700580165 /* logo_branco in Resources */ = {isa = PBXBuildFile; fileRef = 16E456531F89A81300580165 /* logo_branco */; };
+		16E456551F89A8B500580165 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 16E456501F89A43C00580165 /* bg.png */; };
 		9EC564B24DD93CA3B05AE3D2 /* Pods_Multi_Inteligencia_Coletiva.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63730C0376272CB413BC257C /* Pods_Multi_Inteligencia_Coletiva.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +45,7 @@
 		1602C2151F736797005EE7A1 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainNavigationViewController.swift; path = app/controllers/MainNavigationViewController.swift; sourceTree = "<group>"; };
 		160E72111F748762006ACAEF /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SideMenuTableViewController.swift; path = app/controllers/SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		160E72131F749323006ACAEF /* MenuItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuItemTableViewCell.swift; path = app/components/MenuItemTableViewCell.swift; sourceTree = "<group>"; };
+		161C93BB1F87063100F19BD0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = app/controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		1658BFBC1F6F5639009B73C0 /* Multi Inteligencia Coletiva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multi Inteligencia Coletiva.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1658BFBF1F6F5639009B73C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1658BFC41F6F5639009B73C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,7 +54,16 @@
 		1658BFCB1F6F563A009B73C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		167623D31F712B1000A4E30C /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTableViewCell.swift; path = app/components/CardTableViewCell.swift; sourceTree = "<group>"; };
 		167623D71F713C8700A4E30C /* CursosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CursosTableViewController.swift; path = app/controllers/CursosTableViewController.swift; sourceTree = "<group>"; };
+		16777C001F76E7ED0044D208 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = app/commons/Colors.swift; sourceTree = "<group>"; };
+		16C708B21F89B1E30019A645 /* CadastroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CadastroController.swift; path = app/controllers/CadastroController.swift; sourceTree = "<group>"; };
+		16C708B51F89B2FF0019A645 /* AlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertFactory.swift; path = app/utils/AlertFactory.swift; sourceTree = "<group>"; };
+		16C708BB1F89BD140019A645 /* MainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTextField.swift; path = app/components/MainTextField.swift; sourceTree = "<group>"; };
+		16C708BD1F89E1710019A645 /* UsuarioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioService.swift; sourceTree = "<group>"; };
 		16C87F031F71F15500D40621 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderTableViewCell.swift; path = app/components/HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		16E456451F896E5100580165 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
+		16E456501F89A43C00580165 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = "Multi Inteligencia Coletiva/app/assets/images/bg.png"; sourceTree = SOURCE_ROOT; };
+		16E456511F89A66800580165 /* logo-multi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-multi.png"; sourceTree = "<group>"; };
+		16E456531F89A81300580165 /* logo_branco */ = {isa = PBXFileReference; explicitFileType = image.png; name = logo_branco; path = "Multi Inteligencia Coletiva/app/assets/images/logo_branco"; sourceTree = SOURCE_ROOT; };
 		2F2FC5CCB386B86395BD15CD /* Pods-Multi Inteligencia Coletiva.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Multi Inteligencia Coletiva.release.xcconfig"; path = "Pods/Target Support Files/Pods-Multi Inteligencia Coletiva/Pods-Multi Inteligencia Coletiva.release.xcconfig"; sourceTree = "<group>"; };
 		63730C0376272CB413BC257C /* Pods_Multi_Inteligencia_Coletiva.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Multi_Inteligencia_Coletiva.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D057E03838A2DE195E9E28D8 /* Pods-Multi Inteligencia Coletiva.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Multi Inteligencia Coletiva.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Multi Inteligencia Coletiva/Pods-Multi Inteligencia Coletiva.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +103,9 @@
 		160163321F7349E000A3B403 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				16E456531F89A81300580165 /* logo_branco */,
+				16E456511F89A66800580165 /* logo-multi.png */,
+				16E456501F89A43C00580165 /* bg.png */,
 				160163331F7349E000A3B403 /* baymax.jpg */,
 			);
 			name = images;
@@ -111,6 +133,9 @@
 		1658BFBE1F6F5639009B73C0 /* Multi Inteligencia Coletiva */ = {
 			isa = PBXGroup;
 			children = (
+				16C708B41F89B2DA0019A645 /* utils */,
+				16C0469B1F896D0500195A8F /* services */,
+				16777BFF1F76E7C50044D208 /* commons */,
 				160163241F73367100A3B403 /* assets */,
 				167623D21F712AE000A4E30C /* components */,
 				1658BFD41F6F57BF009B73C0 /* models */,
@@ -130,6 +155,8 @@
 				167623D71F713C8700A4E30C /* CursosTableViewController.swift */,
 				1602C2151F736797005EE7A1 /* MainNavigationViewController.swift */,
 				160E72111F748762006ACAEF /* SideMenuTableViewController.swift */,
+				161C93BB1F87063100F19BD0 /* LoginViewController.swift */,
+				16C708B21F89B1E30019A645 /* CadastroController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -149,8 +176,35 @@
 				167623D31F712B1000A4E30C /* CardTableViewCell.swift */,
 				16C87F031F71F15500D40621 /* HeaderTableViewCell.swift */,
 				160E72131F749323006ACAEF /* MenuItemTableViewCell.swift */,
+				16C708BB1F89BD140019A645 /* MainTextField.swift */,
 			);
 			name = components;
+			sourceTree = "<group>";
+		};
+		16777BFF1F76E7C50044D208 /* commons */ = {
+			isa = PBXGroup;
+			children = (
+				16777C001F76E7ED0044D208 /* Colors.swift */,
+			);
+			name = commons;
+			sourceTree = "<group>";
+		};
+		16C0469B1F896D0500195A8F /* services */ = {
+			isa = PBXGroup;
+			children = (
+				16E456451F896E5100580165 /* HttpService.swift */,
+				16C708BD1F89E1710019A645 /* UsuarioService.swift */,
+			);
+			name = services;
+			path = app/services;
+			sourceTree = "<group>";
+		};
+		16C708B41F89B2DA0019A645 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				16C708B51F89B2FF0019A645 /* AlertFactory.swift */,
+			);
+			name = utils;
 			sourceTree = "<group>";
 		};
 		79F04779472AB1E36EE03C17 /* Pods */ = {
@@ -233,7 +287,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E456541F89A87700580165 /* logo_branco in Resources */,
 				160163311F7336F800A3B403 /* thayla.jpg in Resources */,
+				16E456551F89A8B500580165 /* bg.png in Resources */,
 				1658BFCA1F6F563A009B73C0 /* LaunchScreen.storyboard in Resources */,
 				160163301F7336F800A3B403 /* lucas.jpg in Resources */,
 				1658BFC71F6F5639009B73C0 /* Assets.xcassets in Resources */,
@@ -305,14 +361,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				1602C2161F736797005EE7A1 /* MainNavigationViewController.swift in Sources */,
+				16777C011F76E7ED0044D208 /* Colors.swift in Sources */,
 				160163211F73323200A3B403 /* Curso.swift in Sources */,
 				16C87F041F71F15500D40621 /* HeaderTableViewCell.swift in Sources */,
 				160E72141F749323006ACAEF /* MenuItemTableViewCell.swift in Sources */,
+				16C708B31F89B1E30019A645 /* CadastroController.swift in Sources */,
+				16C708BC1F89BD140019A645 /* MainTextField.swift in Sources */,
+				16E456461F896E5100580165 /* HttpService.swift in Sources */,
+				16C708BE1F89E1710019A645 /* UsuarioService.swift in Sources */,
 				160163231F7332B400A3B403 /* Usuario.swift in Sources */,
 				1658BFC01F6F5639009B73C0 /* AppDelegate.swift in Sources */,
 				167623D41F712B1000A4E30C /* CardTableViewCell.swift in Sources */,
 				167623D81F713C8700A4E30C /* CursosTableViewController.swift in Sources */,
+				16C708B61F89B2FF0019A645 /* AlertFactory.swift in Sources */,
 				160E72121F748762006ACAEF /* SideMenuTableViewController.swift in Sources */,
+				161C93BC1F87063100F19BD0 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
