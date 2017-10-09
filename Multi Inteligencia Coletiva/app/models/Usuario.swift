@@ -8,16 +8,16 @@
 
 import UIKit
 
-struct Usuario {
-    var id: Int!
+struct Usuario: Codable {
+    var id: Int?
     var nome: String?
-    var foto: String!
+    var foto: String?
     var email: String?
     var cidade: String?
-    var senha: String!
+    var senha: String?
  
     var description: [String: Any] {
-        get { return [ "id": id, "nome": nome!, "foto": foto, "email": email!, "cidade": cidade!, "senha": senha ]}
+        get { return [ "id": id, "nome": nome, "foto": foto, "email": email, "cidade": cidade, "senha": senha ]}
     }
 }
 

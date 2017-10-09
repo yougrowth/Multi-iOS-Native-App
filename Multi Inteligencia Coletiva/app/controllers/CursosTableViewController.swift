@@ -54,7 +54,7 @@ class CursosTableViewController: UITableViewController {
             let card = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath) as? CardTableViewCell
             
             card?.cursoImage.image = UIImage(named: "baymax.jpg")
-            card?.cursoTituloLabel.text = self.cursos[indexPath.row].titulo
+            card?.cursoTituloLabel.text = self.cursos[indexPath.row].nome
             card?.cursoDescLabel.text = self.cursos[indexPath.row].descricao
             card?.autorImage.image = UIImage(named: (self.cursos[indexPath.row].autor?.foto)!)
             card?.autorNome.text = self.cursos[indexPath.row].autor?.nome

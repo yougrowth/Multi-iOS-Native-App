@@ -256,7 +256,7 @@
             <objects>
                 <tableViewController id="pG0-98-OcW" customClass="CursosTableViewController" customModule="Multi_Inteligencia_Coletiva" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="PcJ-E3-uwG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
@@ -280,7 +280,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Criar curso"/>
                                             <connections>
-                                                <action selector="deslogar:" destination="pG0-98-OcW" eventType="touchUpInside" id="Iuv-uK-wPu"/>
+                                                <segue destination="Lzr-Hx-t6A" kind="show" id="nIj-S3-8V8"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwf-9V-iWo">
@@ -384,6 +384,11 @@
                                 <segue destination="Wam-ZQ-fEW" kind="presentation" id="Dbx-7x-gWD"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Sair" id="aM6-Nx-VTA">
+                            <connections>
+                                <action selector="deslogar:" destination="pG0-98-OcW" id="E7X-x8-lgx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="hUa-zM-P9z" kind="showDetail" identifier="toLoginView" id="qzf-U6-xGW"/>
@@ -391,7 +396,188 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGJ-0L-IrC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="555" y="205.98591549295776"/>
+            <point key="canvasLocation" x="551" y="415"/>
+        </scene>
+        <!--Novo curso-->
+        <scene sceneID="45G-Yh-6AB">
+            <objects>
+                <tableViewController title="Novo curso" clearsSelectionOnViewWillAppear="NO" id="Lzr-Hx-t6A" customClass="CriarCursoController" customModule="Multi_Inteligencia_Coletiva" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4BQ-cr-PXc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection id="WmN-BL-8Nh">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="545" id="qdb-MJ-lt6">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="545"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qdb-MJ-lt6" id="tnK-HQ-2YK">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="545"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kyG-rk-bXp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="544.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criar Cruso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrV-Gj-yF9" customClass="ViewTitleLabel" customModule="Multi_Inteligencia_Coletiva" customModuleProvider="target">
+                                                            <rect key="frame" x="40" y="20" width="240" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome do curso" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q6z-NK-ml8" customClass="BorderedMainTextField" customModule="Multi_Inteligencia_Coletiva" customModuleProvider="target">
+                                                            <rect key="frame" x="40" y="61" width="240" height="40"/>
+                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="RAA-vZ-qDC"/>
+                                                            </constraints>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" textContentType="name"/>
+                                                        </textField>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Categoria" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oJB-8V-9N1" customClass="BorderedMainTextField" customModule="Multi_Inteligencia_Coletiva" customModuleProvider="target">
+                                                            <rect key="frame" x="40" y="121" width="240" height="40"/>
+                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="2Ca-75-0d9"/>
+                                                            </constraints>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                                        </textField>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Privacidade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HmE-El-BxK" customClass="BorderedMainTextField" customModule="Multi_Inteligencia_Coletiva" customModuleProvider="target">
+                                                            <rect key="frame" x="40" y="241" width="240" height="40"/>
+                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="KN5-Nw-cfk"/>
+                                                            </constraints>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                                        </textField>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Duração" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YRf-GA-IEp" customClass="BorderedMainTextField" customModule="Multi_Inteligencia_Coletiva" customModuleProvider="target">
+                                                            <rect key="frame" x="40" y="301" width="240" height="40"/>
+                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="eDk-dU-6OC"/>
+                                                            </constraints>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
+                                                        </textField>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Descrição" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TXU-kh-Ous" customClass="BorderedMainTextField" customModule="Multi_Inteligencia_Coletiva" customModuleProvider="target">
+                                                            <rect key="frame" x="40" y="361" width="240" height="40"/>
+                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="C81-vu-Fcs"/>
+                                                            </constraints>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                                        </textField>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Preço" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lh2-o3-vV7" customClass="BorderedMainTextField" customModule="Multi_Inteligencia_Coletiva" customModuleProvider="target">
+                                                            <rect key="frame" x="40" y="421" width="240" height="40"/>
+                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="Xhp-uh-XUe"/>
+                                                            </constraints>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad"/>
+                                                        </textField>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1g9-tE-SyY">
+                                                            <rect key="frame" x="80" y="481" width="160" height="44"/>
+                                                            <color key="backgroundColor" red="0.054901960780000002" green="0.6588235294" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="44" id="BWN-fI-B8d"/>
+                                                            </constraints>
+                                                            <state key="normal" title="CRIAR">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="onCriarClick:" destination="Lzr-Hx-t6A" eventType="touchUpInside" id="BC2-Wd-dRc"/>
+                                                            </connections>
+                                                        </button>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nível" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Rq-GO-hod" customClass="BorderedMainTextField" customModule="Multi_Inteligencia_Coletiva" customModuleProvider="target">
+                                                            <rect key="frame" x="40" y="181" width="240" height="40"/>
+                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="hBd-IN-xnF"/>
+                                                            </constraints>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                                        </textField>
+                                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="L4V-K6-kML">
+                                                            <rect key="frame" x="150" y="262.5" width="20" height="20"/>
+                                                        </activityIndicatorView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="YRf-GA-IEp" firstAttribute="leading" secondItem="HmE-El-BxK" secondAttribute="leading" id="09K-gb-FOf"/>
+                                                        <constraint firstItem="1g9-tE-SyY" firstAttribute="leading" secondItem="kyG-rk-bXp" secondAttribute="leading" constant="80" id="0pf-rP-jST"/>
+                                                        <constraint firstItem="YRf-GA-IEp" firstAttribute="trailing" secondItem="HmE-El-BxK" secondAttribute="trailing" id="3kQ-eI-KGI"/>
+                                                        <constraint firstAttribute="trailing" secondItem="1g9-tE-SyY" secondAttribute="trailing" constant="80" id="3th-Mb-t0j"/>
+                                                        <constraint firstItem="lh2-o3-vV7" firstAttribute="trailing" secondItem="TXU-kh-Ous" secondAttribute="trailing" id="4hU-3T-l7P"/>
+                                                        <constraint firstItem="L4V-K6-kML" firstAttribute="centerY" secondItem="kyG-rk-bXp" secondAttribute="centerY" id="4zm-MO-nBR"/>
+                                                        <constraint firstItem="Q6z-NK-ml8" firstAttribute="top" secondItem="hrV-Gj-yF9" secondAttribute="bottom" constant="20" id="5UQ-ug-Ub0"/>
+                                                        <constraint firstItem="YRf-GA-IEp" firstAttribute="top" secondItem="HmE-El-BxK" secondAttribute="bottom" constant="20" id="7ko-e4-2oz"/>
+                                                        <constraint firstItem="HmE-El-BxK" firstAttribute="trailing" secondItem="1Rq-GO-hod" secondAttribute="trailing" id="Aq1-dV-FNo"/>
+                                                        <constraint firstItem="1Rq-GO-hod" firstAttribute="top" secondItem="oJB-8V-9N1" secondAttribute="bottom" constant="20" id="COK-2b-spp"/>
+                                                        <constraint firstItem="hrV-Gj-yF9" firstAttribute="top" secondItem="kyG-rk-bXp" secondAttribute="top" constant="20" id="Cco-Nb-KvT"/>
+                                                        <constraint firstItem="Q6z-NK-ml8" firstAttribute="leading" secondItem="hrV-Gj-yF9" secondAttribute="leading" id="Dq1-k1-LvU"/>
+                                                        <constraint firstItem="HmE-El-BxK" firstAttribute="top" secondItem="1Rq-GO-hod" secondAttribute="bottom" constant="20" id="HLo-qv-9jn"/>
+                                                        <constraint firstItem="lh2-o3-vV7" firstAttribute="top" secondItem="TXU-kh-Ous" secondAttribute="bottom" constant="20" id="Jcu-85-40i"/>
+                                                        <constraint firstItem="1g9-tE-SyY" firstAttribute="top" secondItem="lh2-o3-vV7" secondAttribute="bottom" constant="20" id="K1D-J2-Efq"/>
+                                                        <constraint firstItem="L4V-K6-kML" firstAttribute="centerX" secondItem="kyG-rk-bXp" secondAttribute="centerX" id="KqY-Vc-jln"/>
+                                                        <constraint firstItem="1Rq-GO-hod" firstAttribute="leading" secondItem="oJB-8V-9N1" secondAttribute="leading" id="LcI-dx-3ce"/>
+                                                        <constraint firstAttribute="trailing" secondItem="hrV-Gj-yF9" secondAttribute="trailing" constant="40" id="RrG-y2-RYy"/>
+                                                        <constraint firstItem="oJB-8V-9N1" firstAttribute="trailing" secondItem="Q6z-NK-ml8" secondAttribute="trailing" id="XZ0-qQ-TKX"/>
+                                                        <constraint firstItem="TXU-kh-Ous" firstAttribute="leading" secondItem="YRf-GA-IEp" secondAttribute="leading" id="bK7-Qo-P92"/>
+                                                        <constraint firstItem="TXU-kh-Ous" firstAttribute="top" secondItem="YRf-GA-IEp" secondAttribute="bottom" constant="20" id="bhG-6v-NiE"/>
+                                                        <constraint firstItem="Q6z-NK-ml8" firstAttribute="trailing" secondItem="hrV-Gj-yF9" secondAttribute="trailing" id="fbp-PP-Y8p"/>
+                                                        <constraint firstItem="hrV-Gj-yF9" firstAttribute="leading" secondItem="kyG-rk-bXp" secondAttribute="leading" constant="40" id="hcp-i9-vKt"/>
+                                                        <constraint firstItem="oJB-8V-9N1" firstAttribute="top" secondItem="Q6z-NK-ml8" secondAttribute="bottom" constant="20" id="lqB-Wx-R49"/>
+                                                        <constraint firstItem="1Rq-GO-hod" firstAttribute="trailing" secondItem="oJB-8V-9N1" secondAttribute="trailing" id="oG6-ZU-Vbp"/>
+                                                        <constraint firstItem="lh2-o3-vV7" firstAttribute="leading" secondItem="TXU-kh-Ous" secondAttribute="leading" id="rZF-Li-XDa"/>
+                                                        <constraint firstItem="oJB-8V-9N1" firstAttribute="leading" secondItem="Q6z-NK-ml8" secondAttribute="leading" id="ta2-4P-uj7"/>
+                                                        <constraint firstItem="HmE-El-BxK" firstAttribute="leading" secondItem="1Rq-GO-hod" secondAttribute="leading" id="u41-e0-7Qu"/>
+                                                        <constraint firstItem="TXU-kh-Ous" firstAttribute="trailing" secondItem="YRf-GA-IEp" secondAttribute="trailing" id="xV1-in-LSr"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="kyG-rk-bXp" firstAttribute="centerY" secondItem="tnK-HQ-2YK" secondAttribute="centerY" id="TLi-v5-DKo"/>
+                                                <constraint firstItem="kyG-rk-bXp" firstAttribute="height" secondItem="tnK-HQ-2YK" secondAttribute="height" id="k5I-mL-FNq"/>
+                                                <constraint firstAttribute="trailing" secondItem="kyG-rk-bXp" secondAttribute="trailing" id="mUn-Bj-yBf"/>
+                                                <constraint firstItem="kyG-rk-bXp" firstAttribute="leading" secondItem="tnK-HQ-2YK" secondAttribute="leading" id="t2Z-uY-l7z"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Lzr-Hx-t6A" id="1Pq-Nh-nd1"/>
+                            <outlet property="delegate" destination="Lzr-Hx-t6A" id="HDP-LX-FRQ"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="categoriaText" destination="oJB-8V-9N1" id="4rl-yU-nzy"/>
+                        <outlet property="descricaoText" destination="TXU-kh-Ous" id="X7T-jd-mY9"/>
+                        <outlet property="duracaoText" destination="YRf-GA-IEp" id="5p6-Fe-6Jk"/>
+                        <outlet property="loadingIndicator" destination="L4V-K6-kML" id="uDV-Dh-i6B"/>
+                        <outlet property="nivelText" destination="1Rq-GO-hod" id="TD4-2T-DCv"/>
+                        <outlet property="nomeCursoText" destination="Q6z-NK-ml8" id="40S-LL-LPb"/>
+                        <outlet property="precoText" destination="lh2-o3-vV7" id="Xpx-Lt-2Xc"/>
+                        <outlet property="privacidadeText" destination="HmE-El-BxK" id="6aW-lm-maa"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="afB-Rc-LwE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="549" y="1199"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="lza-br-fV9">
@@ -422,7 +608,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D4f-4i-2j3" customClass="MainTextField" customModule="Multi_Inteligencia_Coletiva" customModuleProvider="target">
                                 <rect key="frame" x="36" y="259.5" width="248" height="44"/>
@@ -432,7 +618,7 @@
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDO-pH-qW3">
                                 <rect key="frame" x="36" y="313.5" width="148" height="30"/>
@@ -647,6 +833,6 @@
         <image name="logo_branco" width="411" height="174"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hPQ-2q-Kmw"/>
+        <segue reference="z1S-wv-r0G"/>
     </inferredMetricsTieBreakers>
 </document>

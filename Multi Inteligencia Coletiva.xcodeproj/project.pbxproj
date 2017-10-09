@@ -16,7 +16,11 @@
 		1602C2161F736797005EE7A1 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1602C2151F736797005EE7A1 /* MainNavigationViewController.swift */; };
 		160E72121F748762006ACAEF /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160E72111F748762006ACAEF /* SideMenuTableViewController.swift */; };
 		160E72141F749323006ACAEF /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160E72131F749323006ACAEF /* MenuItemTableViewCell.swift */; };
+		161859B71F8AEDD900911343 /* ViewTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161859B61F8AEDD900911343 /* ViewTitleLabel.swift */; };
+		161859B91F8B322800911343 /* CriarCursoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161859B81F8B322800911343 /* CriarCursoController.swift */; };
 		161C93BC1F87063100F19BD0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161C93BB1F87063100F19BD0 /* LoginViewController.swift */; };
+		162EFE721F89F46700A4967C /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162EFE711F89F46700A4967C /* Auth.swift */; };
+		162EFE741F8A031D00A4967C /* BorderedMainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162EFE731F8A031D00A4967C /* BorderedMainTextField.swift */; };
 		1658BFC01F6F5639009B73C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1658BFBF1F6F5639009B73C0 /* AppDelegate.swift */; };
 		1658BFC51F6F5639009B73C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1658BFC31F6F5639009B73C0 /* Main.storyboard */; };
 		1658BFC71F6F5639009B73C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1658BFC61F6F5639009B73C0 /* Assets.xcassets */; };
@@ -24,6 +28,7 @@
 		167623D41F712B1000A4E30C /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167623D31F712B1000A4E30C /* CardTableViewCell.swift */; };
 		167623D81F713C8700A4E30C /* CursosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167623D71F713C8700A4E30C /* CursosTableViewController.swift */; };
 		16777C011F76E7ED0044D208 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16777C001F76E7ED0044D208 /* Colors.swift */; };
+		16B359521F8B508400AF2FC6 /* CursoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B359511F8B508400AF2FC6 /* CursoService.swift */; };
 		16C708B31F89B1E30019A645 /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C708B21F89B1E30019A645 /* CadastroController.swift */; };
 		16C708B61F89B2FF0019A645 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C708B51F89B2FF0019A645 /* AlertFactory.swift */; };
 		16C708BC1F89BD140019A645 /* MainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C708BB1F89BD140019A645 /* MainTextField.swift */; };
@@ -45,7 +50,11 @@
 		1602C2151F736797005EE7A1 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainNavigationViewController.swift; path = app/controllers/MainNavigationViewController.swift; sourceTree = "<group>"; };
 		160E72111F748762006ACAEF /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SideMenuTableViewController.swift; path = app/controllers/SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		160E72131F749323006ACAEF /* MenuItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuItemTableViewCell.swift; path = app/components/MenuItemTableViewCell.swift; sourceTree = "<group>"; };
+		161859B61F8AEDD900911343 /* ViewTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewTitleLabel.swift; path = app/components/ViewTitleLabel.swift; sourceTree = "<group>"; };
+		161859B81F8B322800911343 /* CriarCursoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CriarCursoController.swift; path = app/controllers/CriarCursoController.swift; sourceTree = "<group>"; };
 		161C93BB1F87063100F19BD0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = app/controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		162EFE711F89F46700A4967C /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Auth.swift; path = app/models/Auth.swift; sourceTree = "<group>"; };
+		162EFE731F8A031D00A4967C /* BorderedMainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BorderedMainTextField.swift; path = app/components/BorderedMainTextField.swift; sourceTree = "<group>"; };
 		1658BFBC1F6F5639009B73C0 /* Multi Inteligencia Coletiva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multi Inteligencia Coletiva.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1658BFBF1F6F5639009B73C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1658BFC41F6F5639009B73C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,6 +64,7 @@
 		167623D31F712B1000A4E30C /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTableViewCell.swift; path = app/components/CardTableViewCell.swift; sourceTree = "<group>"; };
 		167623D71F713C8700A4E30C /* CursosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CursosTableViewController.swift; path = app/controllers/CursosTableViewController.swift; sourceTree = "<group>"; };
 		16777C001F76E7ED0044D208 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = app/commons/Colors.swift; sourceTree = "<group>"; };
+		16B359511F8B508400AF2FC6 /* CursoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursoService.swift; sourceTree = "<group>"; };
 		16C708B21F89B1E30019A645 /* CadastroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CadastroController.swift; path = app/controllers/CadastroController.swift; sourceTree = "<group>"; };
 		16C708B51F89B2FF0019A645 /* AlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertFactory.swift; path = app/utils/AlertFactory.swift; sourceTree = "<group>"; };
 		16C708BB1F89BD140019A645 /* MainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTextField.swift; path = app/components/MainTextField.swift; sourceTree = "<group>"; };
@@ -157,6 +167,7 @@
 				160E72111F748762006ACAEF /* SideMenuTableViewController.swift */,
 				161C93BB1F87063100F19BD0 /* LoginViewController.swift */,
 				16C708B21F89B1E30019A645 /* CadastroController.swift */,
+				161859B81F8B322800911343 /* CriarCursoController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -166,6 +177,7 @@
 			children = (
 				160163201F73323200A3B403 /* Curso.swift */,
 				160163221F7332B400A3B403 /* Usuario.swift */,
+				162EFE711F89F46700A4967C /* Auth.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -177,6 +189,8 @@
 				16C87F031F71F15500D40621 /* HeaderTableViewCell.swift */,
 				160E72131F749323006ACAEF /* MenuItemTableViewCell.swift */,
 				16C708BB1F89BD140019A645 /* MainTextField.swift */,
+				162EFE731F8A031D00A4967C /* BorderedMainTextField.swift */,
+				161859B61F8AEDD900911343 /* ViewTitleLabel.swift */,
 			);
 			name = components;
 			sourceTree = "<group>";
@@ -194,6 +208,7 @@
 			children = (
 				16E456451F896E5100580165 /* HttpService.swift */,
 				16C708BD1F89E1710019A645 /* UsuarioService.swift */,
+				16B359511F8B508400AF2FC6 /* CursoService.swift */,
 			);
 			name = services;
 			path = app/services;
@@ -367,14 +382,19 @@
 				160E72141F749323006ACAEF /* MenuItemTableViewCell.swift in Sources */,
 				16C708B31F89B1E30019A645 /* CadastroController.swift in Sources */,
 				16C708BC1F89BD140019A645 /* MainTextField.swift in Sources */,
+				162EFE721F89F46700A4967C /* Auth.swift in Sources */,
 				16E456461F896E5100580165 /* HttpService.swift in Sources */,
+				162EFE741F8A031D00A4967C /* BorderedMainTextField.swift in Sources */,
 				16C708BE1F89E1710019A645 /* UsuarioService.swift in Sources */,
 				160163231F7332B400A3B403 /* Usuario.swift in Sources */,
 				1658BFC01F6F5639009B73C0 /* AppDelegate.swift in Sources */,
+				16B359521F8B508400AF2FC6 /* CursoService.swift in Sources */,
+				161859B71F8AEDD900911343 /* ViewTitleLabel.swift in Sources */,
 				167623D41F712B1000A4E30C /* CardTableViewCell.swift in Sources */,
 				167623D81F713C8700A4E30C /* CursosTableViewController.swift in Sources */,
 				16C708B61F89B2FF0019A645 /* AlertFactory.swift in Sources */,
 				160E72121F748762006ACAEF /* SideMenuTableViewController.swift in Sources */,
+				161859B91F8B322800911343 /* CriarCursoController.swift in Sources */,
 				161C93BC1F87063100F19BD0 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

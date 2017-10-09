@@ -16,6 +16,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var cadastroButton: UIButton!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configDismissKeyboard() 
+    }
+    
     @IBAction func onEntrarClick(_ sender: Any) {
         self.loadingIndicator.startAnimating()
         
@@ -24,6 +29,7 @@ class LoginViewController: UIViewController {
         }
         else {
             self.loadingIndicator.stopAnimating()
+            present(alertGenerico(titulo: "D:", mensagem: "Não esqueça de preencher o e-mail e a senha"), animated: true, completion: nil)
         }
     }
     
@@ -34,21 +40,39 @@ class LoginViewController: UIViewController {
         usuario.senha = senhaTextField.text
         
         UsuarioService()
-            .logar(usuario.description, depois: salvarToken)
+            .logar(usuario, depois: salvarToken)
     }
     
     func salvarToken(data: Data?, response: URLResponse?, error: Error?) {
+        let jsonDecoder = JSONDecoder()
+        
         do {
-            let json = try JSONSerialization.jsonObject(with: data!, options: []) as! [String: String]
+            let auth = try jsonDecoder.decode(Auth.self, from: data!)
             let defaults = UserDefaults.standard
             
-            defaults.set(json["token"]!, forKey: "session")
+            if let token = auth.token {
+                defaults.set(token, forKey: "session")
+                self.dismiss(animated: true, completion: nil)
+            }
+            else {
+                present(alertGenerico(titulo: ":(", mensagem: "E-mail ou senha inválidos"), animated: true, completion: nil)
+            }
+            
             self.loadingIndicator.stopAnimating()
-            self.dismiss(animated: true, completion: nil)
         }
         catch let error as NSError {
-            self.loadingIndicator.stopAnimating()
             print("Erro: \(error.localizedDescription)")
+            self.loadingIndicator.stopAnimating()
         }
+    }
+    
+    func configDismissKeyboard() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CadastroController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

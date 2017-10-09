@@ -18,8 +18,7 @@ class CadastroController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configDismissKeyboard()
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,6 +75,16 @@ class CadastroController: UIViewController {
                 present(alertGenerico(titulo: "Erro :(", mensagem: "Não foi possível realizar seu cadastro"), animated: true, completion: nil)
             }
         }
+    }
+    
+    func configDismissKeyboard() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CadastroController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     /*

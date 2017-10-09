@@ -8,8 +8,6 @@
 
 import UIKit
 
-typealias HttpRequestCallback = ((Data?, URLResponse?, Error?) -> Void)!
-
 class UsuarioService: NSObject {
     var serviceUrl = URL(string: "https://yg-api-multi-temp.herokuapp.com/usuario")!
     
@@ -19,6 +17,8 @@ class UsuarioService: NSObject {
     }
     
     func logar(_ usuario: Usuario, depois callback: HttpRequestCallback) {
-        
+        serviceUrl.appendPathComponent("/auth")
+        HttpService
+            .post(usuario.description, to: serviceUrl, then: callback)
     }
 }

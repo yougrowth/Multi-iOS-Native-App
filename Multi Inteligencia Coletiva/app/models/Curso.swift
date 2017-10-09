@@ -8,16 +8,19 @@
 
 import Foundation
 
-class Curso: NSObject {
+struct Curso {
+    var id: Int?
     var imagem: String?
-    var titulo: String?
+    var nome: String?
     var descricao: String?
+    var categoria: String?
+    var nivel: String?
+    var privacidade: String?
+    var preco: Double?
+    var duracao: Int?
     var autor: Usuario?
     
-    init(imagem: String, titulo: String, descricao: String, autor: Usuario) {
-        self.imagem = imagem
-        self.titulo = titulo
-        self.descricao = descricao
-        self.autor = autor
+    var description: [String: Any] {
+        get { return ["id": id, "imagem": imagem, "nome": nome, "descricao": descricao, "categoria": categoria, "nivel": nivel, "privacidade": privacidade, "preco": preco, "duracao": duracao, "autor": autor?.id] }
     }
 }
