@@ -10,7 +10,9 @@ import UIKit
 import Foundation
 
 class CursosTableViewController: UITableViewController {
+    var filterField: BorderedMainTextField?
     var cursos:[Curso] = []
+    var filtrados:[Curso] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +30,8 @@ class CursosTableViewController: UITableViewController {
         else {
             listarCursos()
         }
-        
     }
-
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -42,7 +43,7 @@ class CursosTableViewController: UITableViewController {
             return 1
         }
         else {
-            return self.cursos.count
+            return self.filtrados.count
         }
     }
 
@@ -51,16 +52,19 @@ class CursosTableViewController: UITableViewController {
         if indexPath.section == 0 {
             let header = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as? HeaderTableViewCell
             
+            filterField = header?.filtroField
+            
             return header!
         }
         else {
             let card = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath) as? CardTableViewCell
+            let avatar = self.filtrados[indexPath.row].autor?.foto
             
             card?.cursoImage.image = UIImage(named: "baymax.jpg")
-            card?.cursoTituloLabel.text = self.cursos[indexPath.row].nome
-            card?.cursoDescLabel.text = self.cursos[indexPath.row].descricao
-            card?.autorImage.image = UIImage(named: "thayla.jpg")
-            card?.autorNome.text = self.cursos[indexPath.row].autor?.nome
+            card?.cursoTituloLabel.text = self.filtrados[indexPath.row].nome
+            card?.cursoDescLabel.text = self.filtrados[indexPath.row].descricao
+            card?.autorImage.image = UIImage(named: avatar!)
+            card?.autorNome.text = self.filtrados[indexPath.row].autor?.nome
             
             return card!
         }
@@ -68,7 +72,7 @@ class CursosTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 100.0
+            return 135.0
         }
         else {
             return 410.0
@@ -105,18 +109,31 @@ class CursosTableViewController: UITableViewController {
                 curso.autor = Usuario()
                 curso.autor?.id = jsonCurso["autor"]!["id"] as? Int
                 curso.autor?.nome = jsonCurso["autor"]!["nome"] as? String
+                curso.autor?.foto = jsonCurso["autor"]!["foto"] as? String
                 cursoLista.append(curso)
             }
             
-            print(cursoLista)
-            
             self.cursos = cursoLista
+            self.filtrados = [Curso](self.cursos)
             self.tableView.reloadData()
         }
         catch let err as NSError {
             print("\(err.localizedDescription)")
             present(alertGenerico(titulo: ":(", mensagem: "Não foi possível carregar os cursos"), animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func filtrarResultados(_ sender: Any) {
+        if filterField?.text != "" {
+            self.filtrados = self.cursos.filter({ (curso) -> Bool in
+                return curso.nome?.range(of: (self.filterField?.text)!) != nil
+            })
+        }
+        else {
+            self.filtrados = [Curso](self.cursos)
+        }
+        
+        self.tableView.reloadData()
     }
     
     /*

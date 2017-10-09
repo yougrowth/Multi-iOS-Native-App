@@ -11,14 +11,13 @@ import UIKit
 class HeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var novoCursoButton: UIButton!
-    @IBOutlet weak var searchTextField: UITextField!
-
+    @IBOutlet weak var filtroField: BorderedMainTextField!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
         titleLabel.text = "Cursos"
-        searchTextField.layer.borderColor = Colors.BORDER.cgColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
