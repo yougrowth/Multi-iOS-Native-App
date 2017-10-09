@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 class CursosTableViewController: UITableViewController {
-    let cursos:[Curso] = []
+    var cursos:[Curso] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +24,9 @@ class CursosTableViewController: UITableViewController {
         
         if defaults.string(forKey: "session") == nil {
             performSegue(withIdentifier: "toLoginView", sender: self)
+        }
+        else {
+            listarCursos()
         }
         
     }
@@ -56,7 +59,7 @@ class CursosTableViewController: UITableViewController {
             card?.cursoImage.image = UIImage(named: "baymax.jpg")
             card?.cursoTituloLabel.text = self.cursos[indexPath.row].nome
             card?.cursoDescLabel.text = self.cursos[indexPath.row].descricao
-            card?.autorImage.image = UIImage(named: (self.cursos[indexPath.row].autor?.foto)!)
+            card?.autorImage.image = UIImage(named: "thayla.jpg")
             card?.autorNome.text = self.cursos[indexPath.row].autor?.nome
             
             return card!
@@ -81,6 +84,39 @@ class CursosTableViewController: UITableViewController {
         
         defaults.removeObject(forKey: "session")
         performSegue(withIdentifier: "toLoginView", sender: self)
+    }
+    
+    func listarCursos() {
+        CursoService()
+            .listarTodos(depois: self.importarCursos)
+    }
+    
+    func importarCursos(data: Data?, res: URLResponse?, err: Error?) {
+        do {
+            let jsonLista = try JSONSerialization.jsonObject(with: data!, options: []) as! [[String:AnyObject]]
+            
+            var cursoLista: [Curso] = []
+            
+            for jsonCurso in jsonLista {
+                var curso = Curso()
+                curso.id = jsonCurso["id"] as? Int
+                curso.nome = jsonCurso["nome"] as? String
+                curso.descricao = jsonCurso["descricao"] as? String
+                curso.autor = Usuario()
+                curso.autor?.id = jsonCurso["autor"]!["id"] as? Int
+                curso.autor?.nome = jsonCurso["autor"]!["nome"] as? String
+                cursoLista.append(curso)
+            }
+            
+            print(cursoLista)
+            
+            self.cursos = cursoLista
+            self.tableView.reloadData()
+        }
+        catch let err as NSError {
+            print("\(err.localizedDescription)")
+            present(alertGenerico(titulo: ":(", mensagem: "Não foi possível carregar os cursos"), animated: true, completion: nil)
+        }
     }
     
     /*

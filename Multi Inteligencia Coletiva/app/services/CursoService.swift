@@ -15,4 +15,9 @@ class CursoService: NSObject {
         HttpService
             .post(curso.description, to: serviceUrl, then: callback, requireAuth: true)
     }
+    
+    func listarTodos(depois callback: HttpRequestCallback) {
+        HttpService
+            .get(from: serviceUrl, then: callback)
+    }
 }
