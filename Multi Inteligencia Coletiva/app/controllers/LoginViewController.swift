@@ -18,7 +18,21 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configDismissKeyboard() 
+        configDismissKeyboard()
+        
+        if SessionManager.getToken() != nil {
+            performSegue(withIdentifier: "login", sender: self)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     @IBAction func onEntrarClick(_ sender: Any) {
@@ -34,7 +48,7 @@ class LoginViewController: UIViewController {
     }
     
     func logar() {
-        var usuario = Usuario()
+        let usuario = Usuario()
         
         usuario.email = emailTextField.text
         usuario.senha = senhaTextField.text
@@ -44,15 +58,12 @@ class LoginViewController: UIViewController {
     }
     
     func salvarToken(data: Data?, response: URLResponse?, error: Error?) {
-        let jsonDecoder = JSONDecoder()
-        
         do {
-            let auth = try jsonDecoder.decode(Auth.self, from: data!)
-            let defaults = UserDefaults.standard
+            let auth = try JSONSerialization.jsonObject(with: data!, options: []) as! [String: String]
             
-            if let token = auth.token {
-                defaults.set(token, forKey: "session")
-                self.dismiss(animated: true, completion: nil)
+            if let token = auth["token"] {
+                SessionManager.initSession(for: token)
+                performSegue(withIdentifier: "login", sender: self)
             }
             else {
                 present(alertGenerico(titulo: ":(", mensagem: "E-mail ou senha inválidos"), animated: true, completion: nil)

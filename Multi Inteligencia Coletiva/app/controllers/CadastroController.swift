@@ -9,6 +9,7 @@
 import UIKit
 
 class CadastroController: UIViewController {
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var nomeTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var cidadeTextField: UITextField!
@@ -19,6 +20,7 @@ class CadastroController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configDismissKeyboard()
+        configBack()
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,7 +54,7 @@ class CadastroController: UIViewController {
     }
     
     func cadastrar() {
-        var usuario = Usuario()
+        let usuario = Usuario()
         
         usuario.nome = nomeTextField.text
         usuario.email = emailTextField.text
@@ -85,6 +87,18 @@ class CadastroController: UIViewController {
     
     func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    func configBack() {
+        let scroll = UISwipeGestureRecognizer(target: self, action: #selector(CadastroController.voltar))
+        
+        scroll.direction = UISwipeGestureRecognizerDirection.down
+        
+        view.addGestureRecognizer(scroll)
+    }
+    
+    func voltar() {
+        self.dismiss(animated: true)
     }
     
     /*

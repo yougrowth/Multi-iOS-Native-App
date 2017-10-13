@@ -18,15 +18,17 @@
 		161859B71F8AEDD900911343 /* ViewTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161859B61F8AEDD900911343 /* ViewTitleLabel.swift */; };
 		161859B91F8B322800911343 /* CriarCursoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161859B81F8B322800911343 /* CriarCursoController.swift */; };
 		161C93BC1F87063100F19BD0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161C93BB1F87063100F19BD0 /* LoginViewController.swift */; };
-		162EFE721F89F46700A4967C /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162EFE711F89F46700A4967C /* Auth.swift */; };
+		16252A2C1F91576B00F5F480 /* MenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16252A2B1F91576B00F5F480 /* MenuHeader.swift */; };
 		162EFE741F8A031D00A4967C /* BorderedMainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162EFE731F8A031D00A4967C /* BorderedMainTextField.swift */; };
 		1658BFC01F6F5639009B73C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1658BFBF1F6F5639009B73C0 /* AppDelegate.swift */; };
 		1658BFC51F6F5639009B73C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1658BFC31F6F5639009B73C0 /* Main.storyboard */; };
 		1658BFCA1F6F563A009B73C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1658BFC81F6F563A009B73C0 /* LaunchScreen.storyboard */; };
 		165EDD461F8C17D2007AEBEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168C12DF1F8C14EB0092CE3C /* Assets.xcassets */; };
+		167164EA1F912C3B00D7F0C1 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167164E91F912C3B00D7F0C1 /* SessionManager.swift */; };
 		167623D41F712B1000A4E30C /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167623D31F712B1000A4E30C /* CardTableViewCell.swift */; };
 		167623D81F713C8700A4E30C /* CursosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167623D71F713C8700A4E30C /* CursosTableViewController.swift */; };
 		16777C011F76E7ED0044D208 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16777C001F76E7ED0044D208 /* Colors.swift */; };
+		167A47471F8C4505005DADB6 /* DetalhesCursoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167A47461F8C4505005DADB6 /* DetalhesCursoController.swift */; };
 		168C12D81F8BF0F50092CE3C /* eduardo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 168C12D51F8BEE210092CE3C /* eduardo.jpeg */; };
 		168C12D91F8BF0F90092CE3C /* renan.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 168C12D61F8BEE210092CE3C /* renan.jpeg */; };
 		168C12DA1F8BF0FC0092CE3C /* tavares.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 168C12D71F8BEE220092CE3C /* tavares.jpeg */; };
@@ -38,7 +40,7 @@
 		16C708BE1F89E1710019A645 /* UsuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C708BD1F89E1710019A645 /* UsuarioService.swift */; };
 		16C87F041F71F15500D40621 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C87F031F71F15500D40621 /* HeaderTableViewCell.swift */; };
 		16E456461F896E5100580165 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E456451F896E5100580165 /* HttpService.swift */; };
-		16E456541F89A87700580165 /* logo_branco in Resources */ = {isa = PBXBuildFile; fileRef = 16E456531F89A81300580165 /* logo_branco */; };
+		16E456541F89A87700580165 /* logo_branco.png in Resources */ = {isa = PBXBuildFile; fileRef = 16E456531F89A81300580165 /* logo_branco.png */; };
 		16E456551F89A8B500580165 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 16E456501F89A43C00580165 /* bg.png */; };
 		9EC564B24DD93CA3B05AE3D2 /* Pods_Multi_Inteligencia_Coletiva.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63730C0376272CB413BC257C /* Pods_Multi_Inteligencia_Coletiva.framework */; };
 /* End PBXBuildFile section */
@@ -55,20 +57,22 @@
 		161859B61F8AEDD900911343 /* ViewTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewTitleLabel.swift; path = app/components/ViewTitleLabel.swift; sourceTree = "<group>"; };
 		161859B81F8B322800911343 /* CriarCursoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CriarCursoController.swift; path = app/controllers/CriarCursoController.swift; sourceTree = "<group>"; };
 		161C93BB1F87063100F19BD0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = app/controllers/LoginViewController.swift; sourceTree = "<group>"; };
-		162EFE711F89F46700A4967C /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Auth.swift; path = app/models/Auth.swift; sourceTree = "<group>"; };
+		16252A2B1F91576B00F5F480 /* MenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuHeader.swift; path = app/components/MenuHeader.swift; sourceTree = "<group>"; };
 		162EFE731F8A031D00A4967C /* BorderedMainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BorderedMainTextField.swift; path = app/components/BorderedMainTextField.swift; sourceTree = "<group>"; };
 		1658BFBC1F6F5639009B73C0 /* Multi Inteligencia Coletiva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multi Inteligencia Coletiva.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1658BFBF1F6F5639009B73C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1658BFC41F6F5639009B73C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1658BFC91F6F563A009B73C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1658BFCB1F6F563A009B73C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		167164E91F912C3B00D7F0C1 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = app/utils/SessionManager.swift; sourceTree = "<group>"; };
 		167623D31F712B1000A4E30C /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTableViewCell.swift; path = app/components/CardTableViewCell.swift; sourceTree = "<group>"; };
 		167623D71F713C8700A4E30C /* CursosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CursosTableViewController.swift; path = app/controllers/CursosTableViewController.swift; sourceTree = "<group>"; };
 		16777C001F76E7ED0044D208 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = app/commons/Colors.swift; sourceTree = "<group>"; };
-		168C12D51F8BEE210092CE3C /* eduardo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = eduardo.jpeg; sourceTree = "<group>"; };
-		168C12D61F8BEE210092CE3C /* renan.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = renan.jpeg; sourceTree = "<group>"; };
-		168C12D71F8BEE220092CE3C /* tavares.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tavares.jpeg; sourceTree = "<group>"; };
-		168C12DB1F8BF2EB0092CE3C /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
+		167A47461F8C4505005DADB6 /* DetalhesCursoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetalhesCursoController.swift; path = app/controllers/DetalhesCursoController.swift; sourceTree = "<group>"; };
+		168C12D51F8BEE210092CE3C /* eduardo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = eduardo.jpeg; path = app/assets/avatars/eduardo.jpeg; sourceTree = "<group>"; };
+		168C12D61F8BEE210092CE3C /* renan.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = renan.jpeg; path = app/assets/avatars/renan.jpeg; sourceTree = "<group>"; };
+		168C12D71F8BEE220092CE3C /* tavares.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tavares.jpeg; path = app/assets/avatars/tavares.jpeg; sourceTree = "<group>"; };
+		168C12DB1F8BF2EB0092CE3C /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = avatar.jpg; path = app/assets/avatars/avatar.jpg; sourceTree = "<group>"; };
 		168C12DF1F8C14EB0092CE3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16B359511F8B508400AF2FC6 /* CursoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursoService.swift; sourceTree = "<group>"; };
 		16C708B21F89B1E30019A645 /* CadastroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CadastroController.swift; path = app/controllers/CadastroController.swift; sourceTree = "<group>"; };
@@ -79,7 +83,7 @@
 		16E456451F896E5100580165 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		16E456501F89A43C00580165 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = "Multi Inteligencia Coletiva/app/assets/images/bg.png"; sourceTree = SOURCE_ROOT; };
 		16E456511F89A66800580165 /* logo-multi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-multi.png"; sourceTree = "<group>"; };
-		16E456531F89A81300580165 /* logo_branco */ = {isa = PBXFileReference; explicitFileType = image.png; name = logo_branco; path = "Multi Inteligencia Coletiva/app/assets/images/logo_branco"; sourceTree = SOURCE_ROOT; };
+		16E456531F89A81300580165 /* logo_branco.png */ = {isa = PBXFileReference; explicitFileType = image.png; name = logo_branco.png; path = "Multi Inteligencia Coletiva/app/assets/images/logo_branco.png"; sourceTree = SOURCE_ROOT; };
 		2F2FC5CCB386B86395BD15CD /* Pods-Multi Inteligencia Coletiva.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Multi Inteligencia Coletiva.release.xcconfig"; path = "Pods/Target Support Files/Pods-Multi Inteligencia Coletiva/Pods-Multi Inteligencia Coletiva.release.xcconfig"; sourceTree = "<group>"; };
 		63730C0376272CB413BC257C /* Pods_Multi_Inteligencia_Coletiva.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Multi_Inteligencia_Coletiva.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D057E03838A2DE195E9E28D8 /* Pods-Multi Inteligencia Coletiva.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Multi Inteligencia Coletiva.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Multi Inteligencia Coletiva/Pods-Multi Inteligencia Coletiva.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,7 +127,7 @@
 		160163321F7349E000A3B403 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				16E456531F89A81300580165 /* logo_branco */,
+				16E456531F89A81300580165 /* logo_branco.png */,
 				16E456511F89A66800580165 /* logo-multi.png */,
 				16E456501F89A43C00580165 /* bg.png */,
 				160163331F7349E000A3B403 /* baymax.jpg */,
@@ -178,6 +182,7 @@
 				161C93BB1F87063100F19BD0 /* LoginViewController.swift */,
 				16C708B21F89B1E30019A645 /* CadastroController.swift */,
 				161859B81F8B322800911343 /* CriarCursoController.swift */,
+				167A47461F8C4505005DADB6 /* DetalhesCursoController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -187,7 +192,6 @@
 			children = (
 				160163201F73323200A3B403 /* Curso.swift */,
 				160163221F7332B400A3B403 /* Usuario.swift */,
-				162EFE711F89F46700A4967C /* Auth.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -201,6 +205,7 @@
 				16C708BB1F89BD140019A645 /* MainTextField.swift */,
 				162EFE731F8A031D00A4967C /* BorderedMainTextField.swift */,
 				161859B61F8AEDD900911343 /* ViewTitleLabel.swift */,
+				16252A2B1F91576B00F5F480 /* MenuHeader.swift */,
 			);
 			name = components;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				16C708B51F89B2FF0019A645 /* AlertFactory.swift */,
+				167164E91F912C3B00D7F0C1 /* SessionManager.swift */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -319,7 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16E456541F89A87700580165 /* logo_branco in Resources */,
+				16E456541F89A87700580165 /* logo_branco.png in Resources */,
 				168C12DA1F8BF0FC0092CE3C /* tavares.jpeg in Resources */,
 				160163311F7336F800A3B403 /* thayla.jpg in Resources */,
 				168C12D81F8BF0F50092CE3C /* eduardo.jpeg in Resources */,
@@ -396,13 +402,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1602C2161F736797005EE7A1 /* MainNavigationViewController.swift in Sources */,
+				167164EA1F912C3B00D7F0C1 /* SessionManager.swift in Sources */,
 				16777C011F76E7ED0044D208 /* Colors.swift in Sources */,
 				160163211F73323200A3B403 /* Curso.swift in Sources */,
 				16C87F041F71F15500D40621 /* HeaderTableViewCell.swift in Sources */,
+				16252A2C1F91576B00F5F480 /* MenuHeader.swift in Sources */,
+				167A47471F8C4505005DADB6 /* DetalhesCursoController.swift in Sources */,
 				160E72141F749323006ACAEF /* MenuItemTableViewCell.swift in Sources */,
 				16C708B31F89B1E30019A645 /* CadastroController.swift in Sources */,
 				16C708BC1F89BD140019A645 /* MainTextField.swift in Sources */,
-				162EFE721F89F46700A4967C /* Auth.swift in Sources */,
 				16E456461F896E5100580165 /* HttpService.swift in Sources */,
 				162EFE741F8A031D00A4967C /* BorderedMainTextField.swift in Sources */,
 				16C708BE1F89E1710019A645 /* UsuarioService.swift in Sources */,

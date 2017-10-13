@@ -58,7 +58,7 @@ class CriarCursoController: UITableViewController {
     func criarCurso() {
         loadingIndicator.startAnimating()
         
-        var curso = Curso()
+        let curso = Curso()
         curso.nome = nomeCursoText.text
         curso.categoria = categoriaText.text
         curso.nivel = nivelText.text

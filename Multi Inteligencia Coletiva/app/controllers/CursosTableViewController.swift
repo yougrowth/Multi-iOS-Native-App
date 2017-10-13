@@ -22,14 +22,22 @@ class CursosTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let defaults = UserDefaults.standard
-        
-        if defaults.string(forKey: "session") == nil {
-            performSegue(withIdentifier: "toLoginView", sender: self)
+        if SessionManager.getToken() == nil {
+            navigationController?.popToRootViewController(animated: false)
         }
-        else {
+        else if cursos.count == 0 {
             listarCursos()
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.onLogout), name: NSNotification.Name(rawValue: "logout"), object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: - Table view data source
@@ -79,15 +87,21 @@ class CursosTableViewController: UITableViewController {
         }
     }
     
-    func dismissKeyboard() {
-        view.endEditing(true)
+    @IBAction func filtrarResultados(_ sender: Any) {
+        if filterField?.text != "" {
+            self.filtrados = self.cursos.filter({ (curso) -> Bool in
+                return curso.nome?.range(of: (self.filterField?.text)!) != nil
+            })
+        }
+        else {
+            self.filtrados = [Curso](self.cursos)
+        }
+        
+        self.tableView.reloadData()
     }
     
-    @IBAction func deslogar(_ sender: Any) {
-        let defaults = UserDefaults.standard
-        
-        defaults.removeObject(forKey: "session")
-        performSegue(withIdentifier: "toLoginView", sender: self)
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     func listarCursos() {
@@ -102,7 +116,7 @@ class CursosTableViewController: UITableViewController {
             var cursoLista: [Curso] = []
             
             for jsonCurso in jsonLista {
-                var curso = Curso()
+                let curso = Curso()
                 curso.id = jsonCurso["id"] as? Int
                 curso.nome = jsonCurso["nome"] as? String
                 curso.descricao = jsonCurso["descricao"] as? String
@@ -123,17 +137,8 @@ class CursosTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func filtrarResultados(_ sender: Any) {
-        if filterField?.text != "" {
-            self.filtrados = self.cursos.filter({ (curso) -> Bool in
-                return curso.nome?.range(of: (self.filterField?.text)!) != nil
-            })
-        }
-        else {
-            self.filtrados = [Curso](self.cursos)
-        }
-        
-        self.tableView.reloadData()
+    func onLogout() -> Void {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     /*

@@ -21,4 +21,10 @@ class UsuarioService: NSObject {
         HttpService
             .post(usuario.description, to: serviceUrl, then: callback)
     }
+    
+    func getUsuarioLogado(depois callback: HttpRequestCallback) {
+        serviceUrl.appendPathComponent("/logado")
+        HttpService
+            .get(from: serviceUrl, then: callback, requireAuth: true)
+    }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Usuario: Codable {
+class Usuario {
     var id: Int?
     var nome: String?
     var foto: String?

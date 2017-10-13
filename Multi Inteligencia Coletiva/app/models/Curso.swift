@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Curso: Codable {
+class Curso {
     var id: Int?
     var imagem: String?
     var nome: String?
